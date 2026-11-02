@@ -1,0 +1,738 @@
+/* =========================================================
+   CEYLON JOURNEY - BUILD YOUR TRIP PAGE ONLY
+   This CSS is scoped ONLY to Build Your Trip page
+========================================================= */
+
+
+/* =========================================================
+   RESET - ONLY BUILD TRIP PAGE
+========================================================= */
+
+.build-trip-hero,
+.build-trip-section,
+.build-trip-section *,
+.trip-summary,
+.trip-form,
+.summary-card {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.build-trip-hero {
+    position: relative;
+    min-height: 520px;
+    background-image:
+        url("images/build-trip.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.build-trip-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 35, 27, 0.88),
+            rgba(18, 55, 42, 0.65),
+            rgba(0, 0, 0, 0.45)
+        );
+}
+
+.build-trip-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 90%);
+    text-align: center;
+    color: #ffffff;
+    padding: 70px 20px;
+}
+
+.build-trip-hero-content .small-title {
+    margin-bottom: 15px;
+    color: #d2ad4c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.build-trip-hero-content h1 {
+    margin: 0 0 20px;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.build-trip-hero-content > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.build-trip-section {
+    background: #f7f5ef;
+    padding: 90px 6%;
+    color: #17251f;
+}
+
+.build-trip-section .section-heading {
+    max-width: 800px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.build-trip-section .section-heading .small-title {
+    margin-bottom: 10px;
+    color: #b38d2f;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.build-trip-section .section-heading h2 {
+    margin: 0 0 15px;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.15;
+    color: #12372a;
+}
+
+.build-trip-section .section-heading > p:last-child {
+    margin: 0;
+    color: #68736d;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   TRIP BUILDER
+========================================================= */
+
+.trip-builder {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.8fr);
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.trip-form {
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 24px;
+
+    border: 1px solid rgba(18, 55, 42, 0.08);
+
+    box-shadow:
+        0 20px 60px rgba(18, 55, 42, 0.09);
+
+    position: relative;
+}
+
+.trip-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    border-radius: 24px 24px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #12372a,
+            #d2ad4c
+        );
+}
+
+.trip-form h3 {
+    margin: 0 0 30px;
+
+    color: #12372a;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.trip-form .form-group {
+    margin-bottom: 22px;
+}
+
+.trip-form .form-row .form-group {
+    margin-bottom: 0;
+}
+
+.trip-form label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #24382f;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+========================================================= */
+
+.trip-form input[type="date"],
+.trip-form input[type="number"],
+.trip-form select,
+.trip-form textarea {
+    width: 100%;
+
+    border: 1px solid #dce2dd;
+
+    background: #fbfcfa;
+
+    color: #1b2c25;
+
+    border-radius: 12px;
+
+    padding: 14px 15px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.trip-form input[type="date"],
+.trip-form input[type="number"],
+.trip-form select {
+    min-height: 50px;
+}
+
+.trip-form textarea {
+    min-height: 115px;
+    resize: vertical;
+}
+
+.trip-form input:focus,
+.trip-form select:focus,
+.trip-form textarea:focus {
+    border-color: #b99335;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(210, 173, 76, 0.13);
+}
+
+
+/* =========================================================
+   DESTINATION OPTIONS
+========================================================= */
+
+.destination-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.trip-form .destination-options .check-option {
+    margin: 0;
+
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #e1e6e2;
+
+    background: #fbfcfa;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.trip-form .destination-options .check-option:hover {
+    border-color: #d2ad4c;
+
+    background: #fffdf5;
+
+    transform: translateY(-2px);
+}
+
+.check-option input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #12372a;
+
+    cursor: pointer;
+}
+
+.check-option span {
+    margin-left: auto;
+
+    color: #a27d25;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CALCULATE BUTTON
+========================================================= */
+
+.calculate-btn {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 16px 24px;
+
+    border: none;
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #12372a,
+            #1b5140
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 25px rgba(18, 55, 42, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 17px 30px rgba(18, 55, 42, 0.27);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RIGHT SIDE SUMMARY
+========================================================= */
+
+.trip-summary {
+    position: sticky;
+    top: 30px;
+}
+
+.summary-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #12372a,
+            #0c2b20
+        );
+
+    color: #ffffff;
+
+    padding: 36px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 65px rgba(18, 55, 42, 0.22);
+}
+
+
+/* Decorative circles */
+
+.summary-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(210, 173, 76, 0.08);
+
+    top: -100px;
+    right: -90px;
+}
+
+.summary-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(210, 173, 76, 0.12);
+
+    bottom: -80px;
+    left: -70px;
+}
+
+.summary-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SUMMARY HEADER
+========================================================= */
+
+.summary-small {
+    margin: 0 0 8px;
+
+    color: #d2ad4c;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+.summary-card h3 {
+    margin: 0 0 30px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   SUMMARY ITEMS
+========================================================= */
+
+.summary-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-item span {
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 14px;
+}
+
+.summary-item strong {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.summary-divider {
+    height: 1px;
+
+    margin: 25px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(210, 173, 76, 0.55),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   ESTIMATED PRICE
+========================================================= */
+
+.estimated-price {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 12px;
+}
+
+.estimated-price span {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 14px;
+}
+
+.estimated-price strong {
+    color: #d2ad4c;
+
+    font-size: 34px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   PRICE NOTE
+========================================================= */
+
+.price-note {
+    margin: 15px 0 25px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REQUEST BUTTON
+========================================================= */
+
+.request-btn {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 1px solid rgba(210, 173, 76, 0.7);
+
+    border-radius: 12px;
+
+    background: #d2ad4c;
+
+    color: #12372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.request-btn:hover {
+    background: #e1c36e;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(210, 173, 76, 0.2);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .build-trip-section {
+        padding: 70px 5%;
+    }
+
+    .trip-builder {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-summary {
+        position: static;
+    }
+
+    .summary-card {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .build-trip-hero {
+        min-height: 450px;
+    }
+
+    .build-trip-hero-content {
+        padding: 50px 15px;
+    }
+
+    .build-trip-hero-content h1 {
+        font-size: 45px;
+    }
+
+    .build-trip-hero-content > p:last-child {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .build-trip-section {
+        padding: 55px 15px;
+    }
+
+    .build-trip-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .build-trip-section .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .trip-form {
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .trip-form .form-row .form-group {
+        margin-bottom: 20px;
+    }
+
+    .destination-options {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 27px 22px;
+        border-radius: 18px;
+    }
+
+    .summary-card h3 {
+        font-size: 26px;
+    }
+
+    .estimated-price strong {
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .build-trip-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .build-trip-section .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .summary-item {
+        gap: 10px;
+    }
+
+    .summary-item strong {
+        max-width: 55%;
+    }
+}

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Build Your Trip | Ceylon Journey</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="build-trip.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <div class="logo">
+            <a href="index.html">Ceylon Journey</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="build-trip.html" class="active">Build Your Trip</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a href="build-trip.html" class="nav-btn">
+            Plan My Trip
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <section class="build-trip-hero">
+
+        <div class="build-trip-overlay"></div>
+
+        <div class="build-trip-hero-content">
+
+            <p class="small-title">
+                CREATE YOUR PERFECT JOURNEY
+            </p>
+
+            <h1>
+                Build Your Trip
+            </h1>
+
+            <p>
+                Create your own Sri Lankan adventure by selecting
+                your destinations, hotel, vehicle and experiences.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUILD TRIP SECTION
+    ========================== -->
+    <section class="build-trip-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                PLAN YOUR JOURNEY
+            </p>
+
+            <h2>
+                Build Your Own Sri Lanka Trip
+            </h2>
+
+            <p>
+                Choose what you want and get an estimated trip cost.
+            </p>
+
+        </div>
+
+
+        <div class="trip-builder">
+
+            <!-- LEFT SIDE -->
+            <div class="trip-form">
+
+                <h3>Trip Details</h3>
+
+
+                <!-- Dates -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="start-date">
+                            Start Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="start-date"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="end-date">
+                            End Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="end-date"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Guests -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="adults">
+                            Adults
+                        </label>
+
+                        <input
+                            type="number"
+                            id="adults"
+                            min="1"
+                            value="2"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="children">
+                            Children
+                        </label>
+
+                        <input
+                            type="number"
+                            id="children"
+                            min="0"
+                            value="0"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Destinations -->
+                <div class="form-group">
+
+                    <label>
+                        Select Destinations
+                    </label>
+
+                    <div class="destination-options">
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Kandy"
+                                data-price="50"
+                            >
+                            Kandy
+                            <span>$50</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Sigiriya"
+                                data-price="70"
+                            >
+                            Sigiriya
+                            <span>$70</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Ella"
+                                data-price="80"
+                            >
+                            Ella
+                            <span>$80</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Nuwara Eliya"
+                                data-price="60"
+                            >
+                            Nuwara Eliya
+                            <span>$60</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Yala"
+                                data-price="90"
+                            >
+                            Yala
+                            <span>$90</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Galle"
+                                data-price="60"
+                            >
+                            Galle
+                            <span>$60</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Mirissa"
+                                data-price="70"
+                            >
+                            Mirissa
+                            <span>$70</span>
+                        </label>
+
+
+                        <label class="check-option">
+                            <input
+                                type="checkbox"
+                                value="Trincomalee"
+                                data-price="90"
+                            >
+                            Trincomalee
+                            <span>$90</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel -->
+                <div class="form-group">
+
+                    <label for="hotel">
+                        Hotel Category
+                    </label>
+
+                    <select id="hotel">
+
+                        <option value="60">
+                            3 Star Hotel - $60 / night
+                        </option>
+
+                        <option value="100">
+                            4 Star Hotel - $100 / night
+                        </option>
+
+                        <option value="160">
+                            5 Star Hotel - $160 / night
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Vehicle -->
+                <div class="form-group">
+
+                    <label for="vehicle">
+                        Vehicle
+                    </label>
+
+                    <select id="vehicle">
+
+                        <option value="55">
+                            Private Car - $55 / day
+                        </option>
+
+                        <option value="75">
+                            SUV - $75 / day
+                        </option>
+
+                        <option value="95">
+                            Private Van - $95 / day
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Meals -->
+                <div class="form-group">
+
+                    <label for="meals">
+                        Meal Plan
+                    </label>
+
+                    <select id="meals">
+
+                        <option value="0">
+                            Breakfast Only
+                        </option>
+
+                        <option value="25">
+                            Half Board - $25 / day
+                        </option>
+
+                        <option value="40">
+                            Full Board - $40 / day
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Experiences -->
+                <div class="form-group">
+
+                    <label for="experiences">
+                        Experiences
+                    </label>
+
+                    <textarea
+                        id="experiences"
+                        rows="4"
+                        placeholder="Example: Safari, surfing, hiking, cultural experiences..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="calculate-btn"
+                    onclick="calculateTrip()"
+                >
+                    Calculate My Trip
+                </button>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="trip-summary">
+
+                <div class="summary-card">
+
+                    <p class="summary-small">
+                        YOUR CUSTOM TRIP
+                    </p>
+
+                    <h3>
+                        Trip Summary
+                    </h3>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Destinations
+                        </span>
+
+                        <strong id="selected-destinations">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Guests
+                        </span>
+
+                        <strong id="guest-count">
+                            2 Adults
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Hotel
+                        </span>
+
+                        <strong id="hotel-summary">
+                            3 Star
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>
+                            Vehicle
+                        </span>
+
+                        <strong id="vehicle-summary">
+                            Private Car
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="estimated-price">
+
+                        <span>
+                            Estimated Cost
+                        </span>
+
+                        <strong id="total-price">
+                            $0
+                        </strong>
+
+                    </div>
+
+
+                    <p class="price-note">
+                        * This is an estimated price.
+                        Final cost may vary depending on
+                        selected hotels, activities and travel dates.
+                    </p>
+
+
+                    <button
+                        class="request-btn"
+                        onclick="requestTrip()"
+                    >
+                        Request This Trip
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div>
+
+            <h3>
+                Ceylon Journey
+            </h3>
+
+            <p>
+                Discover the beauty of Sri Lanka
+                with a journey designed for you.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="destinations.html">
+                Destinations
+            </a>
+
+            <a href="packages.html">
+                Packages
+            </a>
+
+            <a href="build-trip.html">
+                Build Your Trip
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                Sri Lanka
+            </p>
+
+            <p>
+                info@ceylonjourney.com
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function calculateTrip() {
+
+            const adults =
+                parseInt(document.getElementById("adults").value) || 0;
+
+            const children =
+                parseInt(document.getElementById("children").value) || 0;
+
+
+            const selectedDestinations =
+                document.querySelectorAll(
+                    '.destination-options input[type="checkbox"]:checked'
+                );
+
+
+            let destinationTotal = 0;
+
+
+            selectedDestinations.forEach(function(destination) {
+
+                destinationTotal +=
+                    parseFloat(destination.dataset.price);
+
+            });
+
+
+            const hotel =
+                parseFloat(
+                    document.getElementById("hotel").value
+                );
+
+
+            const vehicle =
+                parseFloat(
+                    document.getElementById("vehicle").value
+                );
+
+
+            const meals =
+                parseFloat(
+                    document.getElementById("meals").value
+                );
+
+
+            let nights = 1;
+
+            const startDate =
+                document.getElementById("start-date").value;
+
+            const endDate =
+                document.getElementById("end-date").value;
+
+
+            if (startDate && endDate) {
+
+                const start =
+                    new Date(startDate);
+
+                const end =
+                    new Date(endDate);
+
+                const difference =
+                    end - start;
+
+                nights =
+                    Math.max(
+                        1,
+                        Math.ceil(
+                            difference /
+                            (1000 * 60 * 60 * 24)
+                        )
+                    );
+
+            }
+
+
+            const days =
+                nights + 1;
+
+
+            const guests =
+                adults + children;
+
+
+            const hotelCost =
+                hotel * nights;
+
+
+            const vehicleCost =
+                vehicle * days;
+
+
+            const mealCost =
+                meals * days * guests;
+
+
+            const destinationCost =
+                destinationTotal * Math.max(1, adults);
+
+
+            const total =
+                hotelCost +
+                vehicleCost +
+                mealCost +
+                destinationCost;
+
+
+            document.getElementById(
+                "selected-destinations"
+            ).textContent =
+                selectedDestinations.length;
+
+
+            document.getElementById(
+                "guest-count"
+            ).textContent =
+                adults +
+                " Adults, " +
+                children +
+                " Children";
+
+
+            document.getElementById(
+                "total-price"
+            ).textContent =
+                "$" +
+                total.toLocaleString();
+
+
+            const hotelSelect =
+                document.getElementById("hotel");
+
+            document.getElementById(
+                "hotel-summary"
+            ).textContent =
+                hotelSelect.options[
+                    hotelSelect.selectedIndex
+                ].text.split(" - ")[0];
+
+
+            const vehicleSelect =
+                document.getElementById("vehicle");
+
+            document.getElementById(
+                "vehicle-summary"
+            ).textContent =
+                vehicleSelect.options[
+                    vehicleSelect.selectedIndex
+                ].text.split(" - ")[0];
+
+        }
+
+
+        function requestTrip() {
+
+            const total =
+                document.getElementById(
+                    "total-price"
+                ).textContent;
+
+            alert(
+                "Thank you! Your estimated trip cost is " +
+                total +
+                ". We will contact you to confirm your trip."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
